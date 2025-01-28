@@ -35,6 +35,30 @@ python booker.py --input sample.json --temp ".\temp" --output ".\kjb"
 ```
 
 Executing this will create the following files:
-./kjb/001 - Genesis 1.mp3
-./kjb/002 - Genesis 2.mp3
-./kjb/003 - Genesis 3.mp3
+- ./kjb/001 - Genesis 1.mp3
+- ./kjb/002 - Genesis 2.mp3
+- ./kjb/003 - Genesis 3.mp3
+- ./kjb/004 ...
+
+# JSON Format
+
+```json
+{
+  "info": {
+    "title": "Your book title",
+    "author": "THe book author",
+    "year": "Publish year",
+    "icon": "PATH_TO_JPG_OR_BLANK"
+  },
+  "chapters": [
+        {
+            "title": "Chapter Title",
+            "lines": [
+                "This is a line",
+                "This is another line"
+            ]
+       }
+ ]
+}
+```
+
