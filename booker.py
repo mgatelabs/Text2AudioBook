@@ -131,7 +131,7 @@ def handle_json_file(input_data, temp_folder: str, output_folder: str):
                         f.write(f"file '{os.path.abspath(item['file'])}'\n")
 
                 # Combine with FFmpeg
-                os.system(f"ffmpeg -f concat -safe 0 -i \"{filelist}\" -c:a libmp3lame -b:a 192k \"{output_file}\"")
+                os.system(f"ffmpeg -f concat -safe 0 -i \"{filelist}\" -c:a libmp3lame -b:a 128k -ac 1 \"{output_file}\"")
 
                 print(f"Audio files combined into {output_file}")
 
