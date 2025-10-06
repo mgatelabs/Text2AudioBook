@@ -28,6 +28,7 @@ Here is an example windows command to convert the sample.json file into an audio
 2. TEMP folder, must already exist, for the app to create wav files
 3. OUTPUT folder, must already exist, where to save the book to
 
+
 ```bash
 mkdir temp
 mkdir kjb
@@ -39,6 +40,14 @@ Executing this will create the following files:
 - ./kjb/002 - Genesis 2.mp3
 - ./kjb/003 - Genesis 3.mp3
 - ./kjb/004 ...
+
+## Optional Parameters
+
+--generator `MODE`
+
+Available mode values: `pyttsx`, `pipertts`
+
+`pyttsx` is the default.  `pipertts` will use the piper web server.
 
 # JSON Format
 
@@ -62,3 +71,12 @@ Executing this will create the following files:
 }
 ```
 
+# Using Piper TTS
+
+If you want to use Piper TTS to have a better sounding book, you can do the following.
+
+## Command
+
+Execute this command to start a piper server running the "Alan" voice.  Before executing this command, you will need to install piper.  See this site for more info https://github.com/OHF-Voice/piper1-gpl.
+
+`python -m piper.http_server -m en_GB-alan-medium`
